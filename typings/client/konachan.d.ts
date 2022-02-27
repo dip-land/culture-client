@@ -1,0 +1,52 @@
+export default class konachan {
+    constructor(options?: konachanOptions);
+    fullpost: boolean | undefined;
+    limit: number;
+    tags: string;
+    post: Promise<konachanPost>;
+}
+declare type konachanOptions = {
+    tags?: Array<string>;
+    limit?: number;
+    fullpost?: boolean | undefined;
+};
+declare type konachanPost = {
+    image?: string;
+    rating: string;
+    tags: string | Array<string>;
+    source: string;
+    created_at: number;
+    author: string;
+    id?: number;
+    creator_id?: number;
+    change?: number;
+    score?: number;
+    md5?: string;
+    file_size?: number;
+    file_url?: string;
+    is_shown_in_index?: boolean;
+    preview_url?: string;
+    preview_width?: number;
+    preview_height?: number;
+    actual_preview_width?: number;
+    actual_preview_height?: number;
+    sample_url?: string;
+    sample_width?: number;
+    sample_height?: number;
+    sample_file_size?: number;
+    jpeg_url?: string;
+    jpeg_width?: number;
+    jpeg_height?: number;
+    jpeg_file_size?: number;
+    has_children?: boolean;
+    parent_id?: number;
+    status?: string;
+    width?: number;
+    height?: number;
+    is_held?: boolean;
+    frames_pending_string?: string;
+    frames_pending?: Array<unknown>;
+    frames_string?: Array<unknown>;
+    frames?: Array<unknown>;
+};
+export {};

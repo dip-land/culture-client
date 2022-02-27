@@ -1,0 +1,6 @@
+.vscode
+dist
+jsdoc-theme
+node_modules
+out
+package-lock.json

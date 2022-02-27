@@ -1,0 +1,52 @@
+{
+	"name": "culture-client",
+	"version": "1.0.0",
+	"description": "An NPM package that fetches images from Danbooru, E621.net, Konachan, Reddit, Rule34, and Yande.re",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist/**/*",
+		"tests/**/*",
+		"typings/**/*"
+	],
+	"scripts": {
+		"test": "node tests/test.js",
+		"build": "tsc && jsdoc README.md ./dist/ -r -t jsdoc-theme",
+		"lint": "eslint \"**\\*.ts\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/shhh7612/culture-client.git"
+	},
+	"engines": {
+		"node": ">=16.0.0"
+	},
+	"keywords": [
+		"danbooru",
+		"e621",
+		"konachan",
+		"reddit",
+		"rule34",
+		"yandre"
+	],
+	"author": "shhh7612",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/shhh7612/culture-client/issues"
+	},
+	"homepage": "https://github.com/shhh7612/culture-client#readme",
+	"dependencies": {
+		"fast-xml-parser": "^4.0.3",
+		"node-fetch": "cjs"
+	},
+	"devDependencies": {
+		"@types/node": "^17.0.18",
+		"@types/node-fetch": "^2.6.1",
+		"@typescript-eslint/eslint-plugin": "^5.12.0",
+		"@typescript-eslint/parser": "^5.12.0",
+		"clean-jsdoc-theme": "^3.3.3",
+		"jsdoc": "^3.6.10",
+		"typescript": "^4.5.5",
+		"culture-client": "latest"
+	}
+}

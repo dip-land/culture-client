@@ -1,0 +1,8 @@
+.vscode
+jsdoc-theme
+node_modules
+out
+src
+.gitignore
+package-lock.json
+tsconfig.json
