@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.3] - 2022-02-28
+### Fixed
+- released wrong npm package
+- small issue with typings
+
 ## [1.0.0] - 2022-02-27
 ### Added
 - class baseHandler, */dist/client/handlers/_.js*
@@ -22,5 +27,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - LICENSE
 
 
-[Unreleased]: https://github.com/shhh7612/culture-client/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/shhh7612/culture-client/compare/v1.0.3...HEAD
+[1.0.3]: https://github.com/shhh7612/culture-client/compare/v1.0.0...v1.0.3
 [1.0.0]: https://github.com/shhh7612/culture-client/releases/tag/v1.0.0

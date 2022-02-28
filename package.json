@@ -1,6 +1,6 @@
 {
 	"name": "culture-client",
-	"version": "1.0.0",
+	"version": "1.0.3",
 	"description": "An NPM package that fetches images from Danbooru, E621.net, Konachan, Reddit, Rule34, and Yande.re",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
@@ -45,8 +45,8 @@
 		"@typescript-eslint/eslint-plugin": "^5.12.0",
 		"@typescript-eslint/parser": "^5.12.0",
 		"clean-jsdoc-theme": "^3.3.3",
+		"culture-client": "^1.0.3",
 		"jsdoc": "^3.6.10",
-		"typescript": "^4.5.5",
-		"culture-client": "latest"
+		"typescript": "^4.5.5"
 	}
 }
