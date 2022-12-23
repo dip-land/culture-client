@@ -5,14 +5,11 @@
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"files": [
-		"dist/**/*",
-		"tests/**/*",
-		"typings/**/*"
+		"dist/**/*"
 	],
 	"scripts": {
-		"test": "node tests/test.js",
-		"build": "tsc && jsdoc README.md ./dist/ -r -t jsdoc-theme",
-		"lint": "eslint \"**\\*.ts\""
+		"test": "node dist/test.js",
+		"build": "tsc && jsdoc README.md ./dist/ -r -t jsdoc-theme"
 	},
 	"repository": {
 		"type": "git",
@@ -42,11 +39,7 @@
 	"devDependencies": {
 		"@types/node": "^17.0.18",
 		"@types/node-fetch": "^2.6.1",
-		"@typescript-eslint/eslint-plugin": "^5.12.0",
-		"@typescript-eslint/parser": "^5.12.0",
-		"clean-jsdoc-theme": "^3.3.3",
-		"culture-client": "^1.0.3",
-		"jsdoc": "^3.6.10",
+		"typedoc": "^0.22.12",
 		"typescript": "^4.5.5"
 	}
 }

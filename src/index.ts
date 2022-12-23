@@ -7,7 +7,7 @@ import yandere from './client/yandere';
 import NF_PackageJSON from 'node-fetch/package.json';
 import FXP_PackageJSON from 'fast-xml-parser/package.json';
 
-export = {
+export default {
 	baseHandler,
     danbooru,
     e621,

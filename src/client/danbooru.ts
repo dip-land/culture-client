@@ -1,15 +1,16 @@
 import baseHandler from "./handlers/_";
 export default class danbooru {
     constructor(options?: danbooruOptions) {
-        this.fullpost = options?.fullpost;
-        this.limit = options?.limit ?? 50;
-        this.tags = options?.tags?.join('+') ?? '';
-        const urlOptions = `limit=${this.limit}&order=none&tags=${this.tags}`
-        this.post = new Promise((resolve) => {
-            new baseHandler().get(`https://danbooru.donmai.us/posts.json?${urlOptions}`).then((posts: any) => {
-                const post: danbooruPost = posts[Math.floor(Math.random() * posts.length)];
+        // this.fullpost = options?.fullpost;
+        // this.limit = options?.limit ?? 50;
+        // this.tags = options?.tags?.join('+') ?? '';
+        // const urlOptions = `limit=${this.limit}&order=none&tags=${this.tags}`
+    }
+    getPost(id: number): Promise<danbooruPost> {
+        return new Promise((resolve) => {
+            new baseHandler().get(`https://danbooru.donmai.us/posts/${id}.json`).then((post: danbooruPost) => {
                 this.fullpost ? resolve(post) : resolve({
-                    image: post.file_url,
+                    image: post.file_url || post.large_file_url || post.preview_file_url,
                     rating: post.rating,
                     tags: post.tag_string?.split(' '),
                     artist: post.tag_string_artist,
@@ -19,16 +20,55 @@ export default class danbooru {
             })
         })
     }
+    getPosts() {
+
+    }
     fullpost: boolean | undefined;
     limit: number;
     tags: string;
-    post: Promise<danbooruPost>;
 }
 
 type danbooruOptions = {
     tags: Array<string>,
     limit: number,
     fullpost: boolean | undefined,
+}
+
+type danbooruPostsOptions = {
+    user?: string,
+    "-user"?: string,
+    fav?: string,
+    "-fav"?: string,
+    ordfav?:string,
+    favcount?:string,
+    order?:string,
+    approver?:string,
+    commenter?:string,
+    comment?:string,
+    noter?:string,
+    noteupdater?:string,
+    note?:string,
+    status?:string,
+    flagger?:string,
+    appealer?:string,
+    commentary?:string,
+    favgroup?:string,
+    "-favgroup"?:string,
+    ordfavgroup?:string,
+    search?:string,
+    id?:string,
+    date?:string,
+    age?:string,
+    "-status"?:string,
+    rating?:string,
+    "-rating"?:string,
+    source?:string,
+    "-source"?:string,
+    pixiv?:string,
+    parent?:string,
+    child?:string,
+    tagcount?:string,
+    score?:string
 }
 
 type danbooruPost = {

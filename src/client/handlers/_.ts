@@ -12,7 +12,7 @@ const xmlOptions = {
     cdataPositionChar: "\\c",
 };
 export default class baseHandler {
-    get(url: string, options?: baseGetOptions) {
+    get(url: string, options?: baseGetOptions): Promise<any> {
         const userAgent = options?.userAgent ? { headers: { "User-Agent": options.userAgent } } : {};
         const XML = options?.XML ? options?.XML : false;
         if (!url) throw new Error('No url supplied...');
